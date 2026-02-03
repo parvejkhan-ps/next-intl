@@ -1,5 +1,5 @@
 {
-  "name": "nextintl",
+  "name": "next-intl-app",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,8 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "next": "14.2.35",
+    "next-intl": "^4.8.0",
     "react": "^18",
-    "react-dom": "^18",
-    "next": "14.2.35"
+    "react-dom": "^18"
   }
 }
