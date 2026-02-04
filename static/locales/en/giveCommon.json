@@ -1,4 +1,5 @@
 {
+    "userName": "Hello common, {userName}",
     "fullMonthName": {
         "januaryLabel": "January",
         "februaryLabel": "February",
