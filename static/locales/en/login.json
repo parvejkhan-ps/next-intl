@@ -1,0 +1,17 @@
+{
+    "login" : "Log in to Charitable Impact",
+    "added": "To be added as an admin, ensure that the email address you use to log in to your Impact Account is the same as the email address your admin invite was sent to.",
+    "details": "Enter your details below",
+    "account": "Don't have an account?",
+    "signUp": "Sign up",
+    "confirmed": "Thanks! Your email is confirmed. To continue, please log in below.",
+    "continue": "Thanks! Your password is now changed. To continue, please log in below.",
+    "sorry": "We’re sorry, something went wrong. Please contact support.",
+    "primaryEmailUpdated": "Your primary email address has been updated.",
+    "passwordChanged": "Your password has been changed. Use your new password to log in again.",
+    "capParticipantCreated": "Thanks for creating your Impact Account. Log in below to continue.",
+    "capParticipantLoginMessage": "To be added to Charitable Allowance, ensure the email address you use to log in to your Impact Account is the same as the email address your invite was sent to.",
+    "capExistingUserInfo": "It looks like you already have an account with us. To continue, please log in below.",
+    "headerTitle": "Log in to your Impact Account | Charitable Impact",
+    "headerDesc": "Log in to your Impact Account to manage your charitable giving and support causes you care about."
+}

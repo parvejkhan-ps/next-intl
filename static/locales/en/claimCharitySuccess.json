@@ -1,0 +1,11 @@
+{
+    "claimedYourCharity": "you’ve claimed your charity",
+    "nowHaveAccessTo": "You now have access to {{charityName}}’s Charity Account.",
+    "goToCharityAccount": "Go to my Charity Account",
+    "accessCharityAccount": "How to access your Charity Account",
+    "oneLoginBothAccount": "One login for both accounts",
+    "personalAccoundDescription": "Your personal Impact Account and Charity Account are linked together. You can use the same email and password to access both accounts.",
+    "switchBetweenAccount": "Switch between accounts easily",
+    "whenLoggerInDescription": "When you're logged in, select your profile photo. Then choose “Switch account” to go between your personal Impact Account and Charity Account.",
+    "startCustomizingAccount": "Start customizing your Charity Account"
+}
