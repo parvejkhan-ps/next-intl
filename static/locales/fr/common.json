@@ -1,0 +1,22 @@
+{
+    "title": "Hello fr {name}",
+    "description": "You have fr {count} messages",
+    "shareProfileHeader": "Share this",
+    "shareLink": "Or share link",
+    "giveButtonText": "Give",
+    "favouritesToastMessage": "Added to favourites",
+    "givingGroup": "Giving Group",
+    "campaigns": "campaign",
+    "charity": "Charity",
+    "closedAcountHeading": "Sorry, this profile no longer exists.",
+    "returnToProfile": "Return to profile",
+    "returnToDashboard": "Return to dashboard",
+    "editPage": "Edit page",
+    "viewPublicPage": "View public page",
+    "charityRevokedMsg": "This charity can no longer receive gifts.",
+    "cancel": "Cancel",
+    "add": "Add",
+    "done": "Done",
+    "showMore": "Show more",
+    "showLess": "Show less"
+}
