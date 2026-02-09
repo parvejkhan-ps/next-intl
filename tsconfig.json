@@ -27,7 +27,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-, "app/i18n/request.js"  ],
+, "i18n/request.js"  ],
   "exclude": [
     "node_modules"
   ]

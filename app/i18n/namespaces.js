@@ -4,4 +4,5 @@ export const routeNamespaces = {
   '/dashboard/ssr': ['dashboard', 'common'],
   '/profile': ['campaignProfile'],
   '/classbased': ['campaignProfile','common'],
+  '/classbased2': ['campaignProfile','common'],
 };
