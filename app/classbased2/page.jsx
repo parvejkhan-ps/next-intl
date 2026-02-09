@@ -10,6 +10,7 @@ class ProfileHead extends Component {
       <div>
         <h2>{t("campaignProfile:groupButtonText")}</h2>
         <h2>{t("common:title", { name: "parvej class" })}</h2>
+        <h2>{t("dashboard:title", { name: "parvej class" })}</h2>
       </div>
     );
   }

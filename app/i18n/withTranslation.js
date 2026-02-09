@@ -16,15 +16,49 @@ export default function withTranslation(namespaces) {
 
       // Single t() function
       const t = (key, values) => {
-        const [namespace, messageKey] = key.split(':');
+        let opts = values || {};
 
-        if (!translators[namespace]) {
-          if (process.env.NODE_ENV !== 'production') {
-            console.warn(`Missing namespace: ${namespace}`);
-          }
-          return key;
+        // Support: t('key', 'fallback')
+        if (typeof values === 'string') {
+          opts = { defaultValue: values };
         }
+        const {
+          defaultValue,
+          context,
+          ns,
+          lng,
+          returnObjects,
+          ...vars
+        } = opts;
+        const [namespace, messageKey] = key.split(':');
+        console.log("values",opts,defaultValue,namespace,messageKey)
+        // console.log("==>tramsmmss",translators[namespace].has(messageKey))
+        if (!translators[namespace].has(messageKey)) {
+          console.log("name",namespace)
+          return defaultValue || key;
+        }
+         // Context support
+        // key_male / key_female
+        // ----------------------------
 
+        if (context) {
+          console.log("context ===>",context)
+          const contextKey = `${realKey}_${context}`;
+
+          try {
+            return translators[namespace](contextKey, values);
+          } catch (e) {
+          }
+        }
+try {
+          return translators[namespace](messageKey, values);
+        } catch (err) {
+          console.log("error",err)
+          // No crash → fallback
+          if (defaultValue) return defaultValue;
+
+          return values || key;
+        }
         return translators[namespace](messageKey, values);
       };
 
