@@ -1,5 +1,6 @@
 import { log } from 'console';
-// import { NextIntlClientProvider } from 'next-intl';
+import { NextIntlClientProvider } from 'next-intl';
+import IntlErrorHandlingProvider from './i18n/IntlErrorHandlingProvider';
 // import { getMessages } from 'next-intl/server';
 
 export default async function RootLayout({ children }) {
@@ -10,11 +11,10 @@ export default async function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        {/* <NextIntlClientProvider
-          messages={messages}
-          fallbackOnEmptyString
-        > */}
+         {/* <NextIntlClientProvider >  */}
+        {/* <IntlErrorHandlingProvider > */}
           {children}
+          {/* </IntlErrorHandlingProvider> */}
         {/* </NextIntlClientProvider> */}
       </body>
     </html>

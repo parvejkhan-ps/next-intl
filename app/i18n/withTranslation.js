@@ -23,41 +23,16 @@ export default function withTranslation(namespaces) {
           opts = { defaultValue: values };
         }
         const {
-          defaultValue,
-          context,
-          ns,
-          lng,
-          returnObjects,
-          ...vars
+          defaultValue
         } = opts;
+        // console.log("values=============>",values)
         const [namespace, messageKey] = key.split(':');
-        console.log("values",opts,defaultValue,namespace,messageKey)
+        // console.log("values",opts,defaultValue,namespace,messageKey)
         // console.log("==>tramsmmss",translators[namespace].has(messageKey))
         if (!translators[namespace].has(messageKey)) {
           console.log("name",namespace)
-          return defaultValue || key;
-        }
-         // Context support
-        // key_male / key_female
-        // ----------------------------
-
-        if (context) {
-          console.log("context ===>",context)
-          const contextKey = `${realKey}_${context}`;
-
-          try {
-            return translators[namespace](contextKey, values);
-          } catch (e) {
-          }
-        }
-try {
-          return translators[namespace](messageKey, values);
-        } catch (err) {
-          console.log("error",err)
-          // No crash → fallback
-          if (defaultValue) return defaultValue;
-
-          return values || key;
+          
+          return defaultValue || "";
         }
         return translators[namespace](messageKey, values);
       };

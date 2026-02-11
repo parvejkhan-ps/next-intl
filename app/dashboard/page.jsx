@@ -4,7 +4,6 @@ import UserInfoSSR from '../components/UserInfossr';
 import { NextIntlClientProvider, useTranslations } from 'next-intl';
 import { loadNamespaces } from '../i18n/loadNamespaces';
 import { getPostData } from '../api';
-// import { getMessages } from '../i18n/getMessages';
 export async function generateMetadata({params}) {
   const data = await getPostData("1");
   return {

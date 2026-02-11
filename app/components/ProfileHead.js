@@ -9,8 +9,8 @@ class ProfileHead extends Component {
 
     return (
       <div>
-        <h2>{t.campaignProfile('groupButtonText')}</h2>
-        <h2>{t.common('title',{name:"parvej"})}</h2>
+       <h2>{t("campaignProfile:groupButtonText")}</h2>
+        <h2>{t("common:title", { name: "parvej", surname: "khan" })}</h2>
       </div>
     );
   }

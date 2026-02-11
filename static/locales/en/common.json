@@ -1,5 +1,5 @@
 {
-    "title": "Hello {name}",
+    "title": "Hello {name} {surname}",
     "description": "You have {count} messages",
     "shareProfileHeader": "Share this",
     "shareLink": "Or share link",

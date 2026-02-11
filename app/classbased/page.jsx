@@ -7,7 +7,7 @@ async function Page(props) {
   return <>
   
   <h2>{t("campaignProfile:groupButtonText","deflt")}</h2>
-        <h2>{t("common:title", { name: "parvej class" })}</h2>
+        <h2>{t("common:title", { name: "parvej class", surname: "khan" })}</h2>
 
 
         class based component
