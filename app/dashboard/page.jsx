@@ -19,7 +19,6 @@ export default async function DashboardPage() {
     ...baseMessages,
     ...(await loadNamespaces(['dashboard']))
   };
-  console.log("Mess",messages);
   
   // const t =  await getTranslations();
   // const t2 =  useTranslations();

@@ -1,5 +1,5 @@
 import ProfileHead from '../components/ProfileHead';
-import withTranslation from '../i18n/withTranslation';
+import {withTranslation} from '../i18n/withTranslation';
 
 async function Page(props) {
     const { t } = props;

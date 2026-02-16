@@ -1,5 +1,5 @@
 {
-    "userName": "Hello, {{userName}}",
+    "userName": "Hello, fr {userName}",
     "firstLogin": {
         "welcomeModalHeader": "Welcome to your new Impact Account",
         "welcomeModalInfo1": "Add money to your account now and over time. Then, give to your favourite charities from your account whenever you like.",

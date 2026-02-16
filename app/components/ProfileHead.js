@@ -1,7 +1,7 @@
 'use client';
 
 import React, { Component } from 'react';
-import withTranslation from '../i18n/withTranslation';
+import {withTranslation} from '../i18n/withTranslation';
 
 class ProfileHead extends Component {
   render() {

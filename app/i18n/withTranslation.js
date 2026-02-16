@@ -1,43 +1,85 @@
-import { useTranslations } from 'next-intl';
-import React from 'react';
+"use client";
+import { useTranslations, useLocale } from "next-intl";
+import { useRouter } from "next/navigation";
+import React from "react";
 
-export default function withTranslation(namespaces) {
+let currentLocale = "en";
+
+export let i18n = {};
+
+export function withTranslation(namespaces) {
   return function (WrappedComponent) {
     return function WithTranslation(props) {
-      const nsArray = Array.isArray(namespaces)
-        ? namespaces
-        : [namespaces];
+      const locale = useLocale();
+      const router = useRouter();
 
-      // Create translation functions per namespace
+      const nsArray = Array.isArray(namespaces) ? namespaces : [namespaces];
+
       const translators = {};
       nsArray.forEach((ns) => {
         translators[ns] = useTranslations(ns);
       });
 
-      // Single t() function
-      const t = (key, values) => {
-        let opts = values || {};
+      const defaultNamespace = nsArray[0];
 
-        // Support: t('key', 'fallback')
-        if (typeof values === 'string') {
-          opts = { defaultValue: values };
+      const t = (key, fallbackOrValues, maybeValues) => {
+        let defaultValue;
+        let values;
+
+        if (typeof fallbackOrValues === "string") {
+          defaultValue = fallbackOrValues;
+          values = maybeValues;
+        } else {
+          defaultValue = fallbackOrValues?.defaultValue;
+          values = fallbackOrValues;
         }
-        const {
-          defaultValue
-        } = opts;
-        // console.log("values=============>",values)
-        const [namespace, messageKey] = key.split(':');
-        // console.log("values",opts,defaultValue,namespace,messageKey)
-        // console.log("==>tramsmmss",translators[namespace].has(messageKey))
-        if (!translators[namespace].has(messageKey)) {
-          console.log("name",namespace)
-          
-          return defaultValue || "";
+
+        let namespace = defaultNamespace;
+        let messageKey = key;
+
+        if (key.includes(":")) {
+          const parts = key.split(":");
+          namespace = parts[0];
+          messageKey = parts[1];
         }
-        return translators[namespace](messageKey, values);
+
+        const translator = translators[namespace];
+
+        // ✅ If translation exists → use next-intl interpolation
+        if (translator?.has(messageKey)) {
+          return translator(messageKey, values);
+        }
+
+        // ✅ If missing but fallback exists → manually interpolate
+        if (defaultValue) {
+          if (!values) return defaultValue;
+
+          return defaultValue.replace(
+            /\{(.*?)\}/g,
+            (_, match) => values?.[match.trim()] ?? "",
+          );
+        }
+
+        return "";
       };
 
-      return <WrappedComponent {...props} t={t} />;
+      i18n = {
+        get language() {
+          return currentLocale;
+        },
+
+        set language(newLocale) {
+          currentLocale = newLocale;
+        },
+        changeLanguage(newLocale) {
+          document.cookie = `locale=${newLocale}; path=/`;
+          currentLocale = newLocale;
+          router.refresh()
+        },
+      };
+      return <WrappedComponent {...props} t={t} i18n={i18n} />;
     };
   };
 }
+
+export default { withTranslation, i18n };

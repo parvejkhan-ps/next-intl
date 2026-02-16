@@ -31,7 +31,7 @@
     "popupCurrentBalanceText": "The current {{Profiletype}} balance is {{balance}}.",
     "popupMatchingText": "Gifts to this {{Profiletype}} are being matched. You will be able to give from this {{Profile}} once matching expires.",
     "campaignButtonText": "Campaign",
-    "groupButtonText": "group",
+    "groupButtonText": "group fr",
     "givingGroupText": "Giving Group",
     "matchingCampaignHeader": "Matching history",
     "noResultsFound": "No results found",

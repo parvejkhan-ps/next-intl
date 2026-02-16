@@ -1,9 +1,16 @@
 import { NextIntlClientProvider } from 'next-intl'
+import { getMessages } from 'next-intl/server';
 import React from 'react'
+import { loadNamespaces } from './loadNamespaces';
 
-export default function NextIntlProvider(props) {
+export default async function NextIntlProvider(props) {
+  const baseMessages = await getMessages(); // from request.ts
+    const messages = {
+      ...baseMessages,
+      ...(await loadNamespaces(props.namespaces || [])),
+    };
   return (
-    <NextIntlClientProvider {...props}>
+    <NextIntlClientProvider {...props} messages={messages}>
         {props.children}
     </NextIntlClientProvider>
   )
