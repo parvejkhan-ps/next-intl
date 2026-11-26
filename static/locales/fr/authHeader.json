@@ -1,0 +1,15 @@
+{
+    "accountSettings": "Account Settings",
+    "companyAccountSettings": "Company Account Settings",
+    "name": "Hello {{ name }}!",
+    "switchAccounts": "Switch account",
+    "logout": "Log out",
+    "chimpAdmin": "CHARITABLE IMPACT Admin",
+    "myProfile": "My profile",
+    "editPage": "Edit page",
+    "favoutites": "Favourites",
+    "youCan": "You can",
+    "switchAccoutInfo": "switch to your Impact Account",
+    "here": "here",
+    "gotIt": "Got it"
+}

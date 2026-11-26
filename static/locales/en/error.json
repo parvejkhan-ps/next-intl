@@ -1,0 +1,26 @@
+{
+    "errorHeading": "It looks like something went wrong.",
+    "errorMessage1": "Unfortunately, we couldn't complete this transaction because of an error on our end. Please contact us before trying again: {{email}} or {{telephone}}.",
+    "errorMessage2": "We're sorry for the inconvenience, and we're here to help.",
+    "errorMessage3": "Unfortunately, we couldn't complete this transaction because we were unable to charge your card. Try checking your payment details. If the issue persists, please get in touch with us at",
+    "telephoneNumber": "or 1-877-531-0580",
+    "errorGoToDashboard": "Return to your dashboard",
+    "signUpValidationError":{
+        "firstNameNotNull" : "Please enter your first name",
+        "firstNameHaveLength2": "First Name should have minimum 2 characters",
+        "firstnameLengthInLimit": "First Name cannot have more than 30 characters",
+        "firstNameFormatError": "Enter a first name that does not contain / \\ < >",
+        "lastNameNotNull": "Please enter your last name",
+        "lastnameLengthInLimit": "Last Name cannot have more than 30 characters",
+        "lastNameFormatError": "Enter a last name that does not contain / \\ < >",
+        "passwordNull": "Please choose a password."
+    },
+    "emojiError": "The text entered cannot contain emojis.",
+    "otdErrorHeading": "Sorry, we’ve encountered an issue with sending this gift.",
+    "otdErrorSubHeading": "Please get in touch with us at 1-877-531-0580 or",
+    "otdErrorSubHeadingOne": "so that we can help.",
+    "fieldEmojiFormatError": "Enter {{fieldName}} without emojis or the characters / \\ < > |.",
+    "fieldEmojiError": "Enter {{fieldName}} without emojis.",
+    "fieldFormatError": "Enter {{fieldName}} without the characters / \\ < > |.",
+    "longPasswordError": "Please choose a shorter password."
+}
